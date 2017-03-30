@@ -15,6 +15,7 @@ const pngquant = require('imagemin-pngquant');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 const notify = require('gulp-notify');
+const fileinclude = require('gulp-file-include');
 
 const reload = browserSync.reload;
 
@@ -76,8 +77,6 @@ gulp.task('js', () => {
     .pipe(reload({
       stream: true,
     }));
-  gulp.src('src/js/nobundle/**/*.js')
-    .pipe(gulp.dest('dist/js/nobundle'));
 });
 
 gulp.task('scss-lint', () => {
@@ -104,10 +103,13 @@ gulp.task('imgmin', () => {
     .pipe(gulp.dest('dist/img'));
 });
 
-gulp.task('browser-sync', () => {
-  browserSync({
-    open: true,
-  });
+gulp.task('fileinclude', () => {
+  gulp.src('src/html/*.html')
+    .pipe(fileinclude({
+      prefix: '@@',
+      basepath: '@file',
+    }))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('browser-sync', () => browserSync({
@@ -121,6 +123,9 @@ gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['scss']);
   gulp.watch('src/js/*.js', ['jshint', 'js']);
   gulp.watch('src/img/*', ['imgmin']);
+  gulp.watch('*.html', ['fileinclude', reload]);
 });
 
-gulp.task('default', ['browser-sync', 'js', 'imgmin', 'scss', 'watch']);
+gulp.task('default', ['browser-sync', 'js', 'imgmin', 'scss', 'fileinclude', 'watch']);
+
+gulp.task('build', ['js', 'imgmin', 'scss', 'fileinclude']);
