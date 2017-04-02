@@ -1,1 +1,1 @@
-# Fun-Academy-Test-1
+# Fun Academy – Test 1

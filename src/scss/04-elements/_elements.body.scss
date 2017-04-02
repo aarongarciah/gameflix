@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: $global-font-body;
+    font-weight: 300;
+    background-color: #fff;
+    color: #333;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-font-smoothing: antialiased;
+    // -o-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+}

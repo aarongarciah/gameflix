@@ -16,6 +16,7 @@ const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 const notify = require('gulp-notify');
 const fileinclude = require('gulp-file-include');
+const sourcemaps = require('gulp-sourcemaps');
 
 const reload = browserSync.reload;
 
@@ -31,6 +32,7 @@ gulp.task('scss', () => {
   };
 
   return gulp.src('src/scss/main.scss')
+    .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: onError,
     }))
@@ -52,6 +54,7 @@ gulp.task('scss', () => {
     .pipe(rename({
       suffix: '.min',
     }))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(gulp.dest('dist/css'))
     .pipe(reload({
       stream: true,
@@ -108,13 +111,14 @@ gulp.task('fileinclude', () => {
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file',
+      indent: true,
     }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('dist'));
 });
 
 gulp.task('browser-sync', () => browserSync({
   server: {
-    baseDir: './',
+    baseDir: './dist/',
   },
   open: true,
 }));
@@ -123,9 +127,9 @@ gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['scss']);
   gulp.watch('src/js/*.js', ['jshint', 'js']);
   gulp.watch('src/img/*', ['imgmin']);
-  gulp.watch('*.html', ['fileinclude', reload]);
+  gulp.watch('src/html/**/*.html', ['fileinclude', reload]);
 });
 
-gulp.task('default', ['browser-sync', 'js', 'imgmin', 'scss', 'fileinclude', 'watch']);
+gulp.task('default', ['fileinclude', 'browser-sync', 'js', 'imgmin', 'scss', 'watch']);
 
-gulp.task('build', ['js', 'imgmin', 'scss', 'fileinclude']);
+gulp.task('build', ['fileinclude', 'js', 'imgmin', 'scss']);

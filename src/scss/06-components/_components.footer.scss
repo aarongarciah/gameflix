@@ -1,0 +1,26 @@
+.c-footer {
+    padding: 20px 30px;
+    font-size: $global-font-size * 0.9;
+    text-align: center;
+    color: #fff;
+    background-color: #aaa;
+
+    a {
+        color: #fff;
+
+        &:hover {
+            color: #333;
+        }
+    }
+}
+
+.github-link {
+    svg {
+        display: inline-block;
+        width: 1.4em;
+        height: 1.4em;
+        margin-right: 0.5em;
+        vertical-align: middle;
+        fill: currentColor;
+    }
+}

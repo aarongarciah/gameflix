@@ -1,0 +1,7 @@
+body *:not(script) + * {
+    margin-top: 1.5em;
+}
+
+*:last-child {
+    margin-bottom: 0;
+}
