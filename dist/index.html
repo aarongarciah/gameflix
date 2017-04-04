@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Login – Gameflix by Aarón García Hervás – Fun 🔥 Academy</title>
+        <title>Login / Sign up – Gameflix by Aarón García Hervás – Fun 🔥 Academy</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Login. Test 1 for Fun Academy made by Aarón García Hervás">
+        <meta name="description" content="Login / Sign up. Test 1 for Fun Academy made by Aarón García Hervás">
         <meta name="keywords" content="fun academy, test 1">
         <meta name="image" content="">
 
-        <meta itemprop="name" content="Login – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
-        <meta itemprop="description" content="Login. Test 1 for Fun Academy made by Aarón García Hervás">
+        <meta itemprop="name" content="Login / Sign up – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
+        <meta itemprop="description" content="Login / Sign up. Test 1 for Fun Academy made by Aarón García Hervás">
         <meta itemprop="image" content="/img/fun-academy.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Login – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
-        <meta name="twitter:description" content="Login. Test 1 for Fun Academy made by Aarón García Hervás">
+        <meta name="twitter:title" content="Login / Sign up – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
+        <meta name="twitter:description" content="Login / Sign up. Test 1 for Fun Academy made by Aarón García Hervás">
         <meta name="twitter:site" content="@funacademycom">
         <meta name="twitter:creator" content="@aarongarciah">
         <meta name="twitter:image:src" content="/img/fun-academy-1024x512.png">
 
-        <meta property="og:title" content="Login – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
-        <meta property="og:description" content="Login. Test 1 for Fun Academy made by Aarón García Hervás">
+        <meta property="og:title" content="Login / Sign up – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
+        <meta property="og:description" content="Login / Sign up. Test 1 for Fun Academy made by Aarón García Hervás">
         <meta property="og:image" content="/img/fun-academy-1200x630.png">
         <meta property="og:url" content="https://funacademy.fi/">
         <meta property="og:site_name" content="Fun Academy">
@@ -39,23 +39,63 @@
     </head>
     <body>
         <header class="c-header">
-            Main nav
+            <div class="c-header__container o-container o-container--max">
+                <h1 class="c-header__title">Gameflix</h1>
+
+                
+                <form class="c-header__form" action="#" method="post" accept-charset="utf-8" onsubmit="return submitTo(event, 'dashboard_first.html')">
+                    <input class="c-input c-input--inline-block " type="text" placeholder="Username" required>
+                    <input class="c-input c-input--inline-block " type="password" placeholder="Password" required>
+                    <button class="c-btn c-btn--secondary" type="submit">Log In</button>
+                </form>
+                
+            </div>
         </header>
 
 
-        <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-
-
         <main class="c-main">
-            <div class="o-layout">
-                <div class="o-layout__item">
-                    <p>Fun Academy</p>
-                    <a href="#" class="c-btn">Button!</a>
+
+            <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+
+            <section class="home">
+                <div class="c-carousel" style="background-image: url(img/carousel/gameflix-children-mum-tablet.jpg)">
+                    <div class="c-carousel__inner">
+                        <article class="c-carousel__item js-carousel-item is-active" style="background-image: url(img/carousel/gameflix-children-mum-tablet.jpg)"></article>
+                        <article class="c-carousel__item js-carousel-item" style="background-image: url(img/carousel/gameflix-children-playing.jpg)"></article>
+                        <article class="c-carousel__item js-carousel-item" style="background-image: url(img/carousel/gameflix-child-strong.jpg)"></article>
+                    </div>
+
+                    <div class="home__inner">
+                        <div class="home__copys o-container">
+                            <h2 class="home__title">Every minute towards your revenue</h2>
+                            <p class="home__text">The Fun Learning Universe will be subscription service. For a monthly subscription price, the user can use all the content in the service without limitations. The pricing will be very affordable to attract large amount of users, including kids of less wealthy families and countries.</p>
+                        </div>
+                        <form class="home__login o-container" action="#" method="post" accept-charset="utf-8">
+                            <input class="c-input" type="text" placeholder="Username">
+                            <input class="c-input" type="password" placeholder="Password">
+                            <button class="c-btn c-btn--primary c-btn--block home__submit-btn" type="submit">Log In</button>
+                        </form>
+                        <form class="home__register o-container" action="#" method="post" accept-charset="utf-8">
+                            <input class="c-input" type="text" placeholder="Username" required>
+                            <input class="c-input" type="email" placeholder="Email" required>
+                            <input class="c-input" type="password" placeholder="Password" required>
+                            <input class="c-input" type="password" placeholder="Repeat password" required>
+                            <p><small>By signing up, you agree that you have read and understand our <a href="#" target="_blank" rel="noopener">Terms of Service</a>.</small></p>
+                            <button class="c-btn c-btn--primary c-btn--block home__submit-btn" type="submit">Sign Up <span class="c-btn__chevron" aria-hidden="true">&rsaquo;</span></button>
+                        </form>
+                    </div>
+
+                    <div class="c-carousel__dots js-carousel__dots">
+                        <a class="c-carousel__dots__item is-active js-carousel-dot" href="#carousel-0"></a>
+                        <a class="c-carousel__dots__item js-carousel-dot" href="#carousel-1"></a>
+                        <a class="c-carousel__dots__item js-carousel-dot" href="#carousel-2"></a>
+                    </div>
                 </div>
-            </div>
+            </section>
+
         </main>
 
         <footer class="c-footer">
@@ -80,5 +120,4 @@
         </script>
     </body>
 </html>
-
 

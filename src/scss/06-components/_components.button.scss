@@ -31,17 +31,31 @@
     /* [4] */
     cursor: pointer;
     /* [5] */
-    padding: $global-spacing-unit-small $global-spacing-unit;
+    padding: $global-spacing-unit-tiny $global-spacing-unit;
     transition: $global-transition;
-    border-radius: $global-radius;
+    border: 0;
+    border-radius: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
+
+.c-btn__chevron {
+    font-size: 1.3em;
+}
+
+.c-btn--block {
+    display: block;
+    width: 100%;
+}
+
+
 
 
 /* Style variants
    ========================================================================== */
 
 .c-btn--primary {
-    background-color: #4a8ec2;
+    background-color: $color-primary;
     &,
     &:hover,
     &:active,
@@ -52,12 +66,12 @@
     }
     &:hover,
     &:focus {
-        background-color: #3774a2;
+        background-color: $color-dark;
     }
 }
 
 .c-btn--secondary {
-    background-color: #2f4054;
+    background-color: $color-secondary;
     &,
     &:hover,
     &:active,
@@ -67,25 +81,27 @@
     }
     &:hover,
     &:focus {
-        background-color: #1d2733;
+        background-color: $color-dark;
     }
 }
 
 .c-btn--tertiary {
     background-color: #fff;
-    color: #4a8ec2;
+    color: $color-dark;
     &,
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
-        color: #4a8ec2;
+        color: $color-dark;
     }
     &:hover,
     &:focus {
-        color: #3774a2;
+        color: #000;
     }
 }
+
+
 
 
 /* Size variants
@@ -97,52 +113,4 @@
 
 .c-btn--large {
     padding: $global-spacing-unit $global-spacing-unit-large;
-}
-
-
-/* Ghost buttons
-   ========================================================================== */
-
-
-/**
- * Ghost buttons have see-through backgrounds and are bordered.
- */
-
-$btn-ghost-border-width: 2px;
-.c-btn--ghost {
-    border: $btn-ghost-border-width solid currentColor;
-    padding: ($global-spacing-unit-small - $btn-ghost-border-width) ($global-spacing-unit - $btn-ghost-border-width);
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-        background: none;
-    }
-    &.c-btn--small {
-        padding: ($global-spacing-unit-tiny - $btn-ghost-border-width) ($global-spacing-unit-small - $btn-ghost-border-width);
-    }
-    &.c-btn--large {
-        padding: ($global-spacing-unit - $btn-ghost-border-width) ($global-spacing-unit-large - $btn-ghost-border-width);
-    }
-    &.c-btn--primary {
-        color: #4a8ec2;
-        &:hover,
-        &:focus {
-            color: #3774a2;
-        }
-    }
-    &.c-btn--secondary {
-        color: #2f4054;
-        &:hover,
-        &:focus {
-            color: #1d2733;
-        }
-    }
-    &.c-btn--tertiary {
-        color: #fff;
-        &:hover,
-        &:focus {
-            color: #fff;
-        }
-    }
 }

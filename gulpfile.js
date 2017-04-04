@@ -95,7 +95,7 @@ gulp.task('jshint', () => {
 });
 
 gulp.task('imgmin', () => {
-  gulp.src('src/img/*')
+  gulp.src('src/img/**/*')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{
@@ -130,6 +130,6 @@ gulp.task('watch', () => {
   gulp.watch('src/html/**/*.html', ['fileinclude', reload]);
 });
 
-gulp.task('default', ['fileinclude', 'browser-sync', 'js', 'imgmin', 'scss', 'watch']);
+gulp.task('default', ['fileinclude', 'js', 'imgmin', 'scss', 'watch', 'browser-sync']);
 
 gulp.task('build', ['fileinclude', 'js', 'imgmin', 'scss']);

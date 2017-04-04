@@ -6,4 +6,5 @@
 
 // Standardise some UI treatments.
 $global-radius: 4px !default;
-$global-transition: all 0.25s ease-in-out !default;
+$global-transition-duration: 0.25s;
+$global-transition: all $global-transition-duration ease-in-out !default;

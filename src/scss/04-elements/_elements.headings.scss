@@ -22,25 +22,25 @@ $font-size-h5: 18px !default;
 $font-size-h6: 16px !default;
 
 h1 {
-    @include font-size($font-size-h1);
+    @include font-size($font-size-h1, $global-line-height-headings);
 }
 
 h2 {
-    @include font-size($font-size-h2);
+    @include font-size($font-size-h2, $global-line-height-headings);
 }
 
 h3 {
-    @include font-size($font-size-h3);
+    @include font-size($font-size-h3, $global-line-height-headings);
 }
 
 h4 {
-    @include font-size($font-size-h4);
+    @include font-size($font-size-h4, $global-line-height-headings);
 }
 
 h5 {
-    @include font-size($font-size-h5);
+    @include font-size($font-size-h5, $global-line-height-headings);
 }
 
 h6 {
-    @include font-size($font-size-h6);
+    @include font-size($font-size-h6, $global-line-height-headings);
 }

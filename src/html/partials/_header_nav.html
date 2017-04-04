@@ -1,3 +1,13 @@
 <header class="c-header">
-    Main nav
+    <div class="c-header__container o-container o-container--max">
+        <h1 class="c-header__title">Gameflix</h1>
+
+        @@if (showLogin === true) {
+        <form class="c-header__form" action="#" method="post" accept-charset="utf-8" onsubmit="return submitTo(event, 'dashboard_first.html')">
+            <input class="c-input c-input--inline-block " type="text" placeholder="Username" required>
+            <input class="c-input c-input--inline-block " type="password" placeholder="Password" required>
+            <button class="c-btn c-btn--secondary" type="submit">Log In</button>
+        </form>
+        }
+    </div>
 </header>

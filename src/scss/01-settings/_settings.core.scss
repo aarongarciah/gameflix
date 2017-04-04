@@ -11,24 +11,27 @@ sans-serif;
 ///* ========================================================================
 //   #CORE
 //   ======================================================================== */
-
 // This core file sets up inuitcss’ most important setup variables. They
 // underpin a lot of how the framework functions and should be modified and
 // preconfigured with caution.
 // Base typographical styles and baseline grid. You need to define these values
 // in pixels: inuitcss will convert them to more appropriate units.
-$global-font-size : 16px !default;
-$global-line-height : 24px !default;
+$global-font-size: 16px !default;
+$global-line-height: 24px !default;
+$global-line-height-headings: 1.3 !default;
+
 // Spacing values are determined based on your project’s global line height (i.e
 // your baseline grid). It is not recommended that you modify these following
 // variables (it can break your vertical rhythm), but if you need to, you can.
 $global-spacing-unit: round($global-line-height) !default;
+
 // How many times larger/smaller than the default should our spacing unit
 // variants be?
-$global-spacing-unit-factor-tiny : 0.25 !default;
-$global-spacing-unit-factor-small : 0.5 !default;
-$global-spacing-unit-factor-large : 2 !default;
-$global-spacing-unit-factor-huge : 4 !default;
+$global-spacing-unit-factor-tiny: 0.3 !default;
+$global-spacing-unit-factor-small: 0.5 !default;
+$global-spacing-unit-factor-large: 2 !default;
+$global-spacing-unit-factor-huge: 4 !default;
+
 // Check that the chosen font rules are pixel numbers.
 @each $_font-globals in $global-font-size $global-line-height {
     @if (type-of($_font-globals)==number) {
@@ -54,7 +57,7 @@ $global-spacing-unit-factor-huge : 4 !default;
 }
 
 // Private/framework-only reassignment. Do not alter anything below.
-$global-spacing-unit-tiny : round($global-spacing-unit * $global-spacing-unit-factor-tiny);
+$global-spacing-unit-tiny: round($global-spacing-unit * $global-spacing-unit-factor-tiny);
 $global-spacing-unit-small: round($global-spacing-unit * $global-spacing-unit-factor-small);
 $global-spacing-unit-large: round($global-spacing-unit * $global-spacing-unit-factor-large);
-$global-spacing-unit-huge : round($global-spacing-unit * $global-spacing-unit-factor-huge);
+$global-spacing-unit-huge: round($global-spacing-unit * $global-spacing-unit-factor-huge);

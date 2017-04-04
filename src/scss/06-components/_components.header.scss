@@ -1,5 +1,32 @@
 .c-header {
-    padding: 30px;
+    padding-top: $global-spacing-unit-small;
+    padding-bottom: $global-spacing-unit-small;
     color: #fff;
     background: $color-brand;
+}
+
+.c-header__container {
+    @include mq($from: desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.c-header__title {
+    @include mq($until: desktop) {
+        font-size: $font-size-h1 * 0.7;
+    }
+}
+
+.c-header__form {
+    display: none;
+
+    @include mq($from: desktop) {
+        display: block;
+
+        > * {
+            margin-left: $global-spacing-unit-tiny;
+        }
+    }
 }

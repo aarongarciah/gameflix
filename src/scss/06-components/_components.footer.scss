@@ -1,16 +1,20 @@
 .c-footer {
-    padding: 20px 30px;
+    padding: $global-spacing-unit;
     font-size: $global-font-size * 0.9;
     text-align: center;
     color: #fff;
-    background-color: #aaa;
+    background-color: $color-dark;
 
     a {
         color: #fff;
 
         &:hover {
-            color: #333;
+            color: $color-brand;
         }
+    }
+
+    * + * {
+        margin-top: 1em;
     }
 }
 

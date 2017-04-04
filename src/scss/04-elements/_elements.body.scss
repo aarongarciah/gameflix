@@ -3,9 +3,9 @@ body {
     min-height: 100vh;
     flex-direction: column;
     font-family: $global-font-body;
-    font-weight: 300;
+    font-weight: 400;
     background-color: #fff;
-    color: #333;
+    color: $color-dark;
     // -webkit-font-smoothing: antialiased;
     // -moz-font-smoothing: antialiased;
     // -o-font-smoothing: antialiased;

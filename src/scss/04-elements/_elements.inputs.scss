@@ -1,0 +1,15 @@
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea {
+    appearance: none;
+}
+
+/* Placeholder line-height fix */
+input::-webkit-input-placeholder {
+    line-height: normal;
+}

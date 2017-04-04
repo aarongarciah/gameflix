@@ -2,6 +2,7 @@
 @import "01-settings/_settings.core";
 @import "01-settings/_settings.global";
 @import "01-settings/_settings.colors";
+@import "01-settings/_settings.mq";
 
 // 02. Tools
 @import "node_modules/sass-mq/mq";
@@ -23,18 +24,25 @@
 @import "04-elements/elements.images";
 @import "04-elements/elements.headings";
 @import "04-elements/elements.links";
+@import "04-elements/elements.inputs";
 
 
 // 05. Objects
 @import "05-objects/objects.layout";
+@import "05-objects/objects.container";
 
 // 06. Components
 @import "06-components/components.button";
 @import "06-components/components.header";
 @import "06-components/components.main";
 @import "06-components/components.footer";
+@import "06-components/components.carousel";
+@import "06-components/components.input";
 
-// 07. Utilities
+// 07 Pages
+@import "07-pages/pages.home";
+
+// 08. Utilities
 @import "08-utilities/utilities.clearfix";
 @import "08-utilities/utilities.hide";
 

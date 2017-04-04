@@ -1,3 +1,98 @@
-.p-home {
-    
+.home {
+    position: relative;
+    display: flex;
+    flex: 1 1 100%;
+    background-color: red;
+}
+
+.home__inner {
+    position: relative;
+    z-index: 2;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    min-height: 100%;
+
+    @include mq($from: desktop) {
+        display: flex;
+        // flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.home__copys {
+    padding-top: $global-spacing-unit * 2;
+    padding-bottom: $global-spacing-unit;
+
+    @include mq($from: desktop) {
+        flex-basis: 750px;
+        align-self: flex-end;
+        padding-right: 5%;
+        padding-bottom: 6%;
+        padding-left: 10%;
+    }
+}
+
+.home__login {
+    max-width: 400px;
+    padding-top: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit;
+    margin-right: auto;
+    margin-left: auto;
+
+    > * + * {
+        margin-top: $global-spacing-unit-small;
+    }
+
+    @include mq($from: tablet) {
+        float: left;
+        width: 50%;
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @include mq($from: desktop) {
+        display: none;
+    }
+}
+
+.home__register {
+    max-width: 400px;
+    padding-top: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit * 3;
+    margin-right: auto;
+    margin-left: auto;
+    color: #000;
+
+    a {
+        color: $color-secondary;
+    }
+
+    > * + * {
+        margin-top: $global-spacing-unit-small;
+    }
+
+    @include mq($from: tablet) {
+        float: right;
+        width: 50%;
+        max-width: none;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    @include mq($from: desktop) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-basis: 400px;
+        max-width: none;
+        padding-top: $global-spacing-unit;
+        padding-bottom: $global-spacing-unit;
+        background-color: rgba(#fff, 0.25);
+    }
+}
+
+.home__submit-btn {
+    max-width: 400px;
 }

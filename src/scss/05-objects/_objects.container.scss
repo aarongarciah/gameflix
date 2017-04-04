@@ -1,0 +1,15 @@
+.o-container {
+    padding-right: $global-spacing-unit-small;
+    padding-left: $global-spacing-unit-small;
+
+    @include mq($from: phablet) {
+        padding-right: $global-spacing-unit;
+        padding-left: $global-spacing-unit;
+    }
+}
+
+.o-container--max {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
