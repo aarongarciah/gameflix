@@ -34,7 +34,13 @@ gulp.task('scss', () => {
   return gulp.src('src/scss/main.scss')
     .pipe(sourcemaps.init())
     .pipe(plumber({
-      errorHandler: onError,
+      errorHandler: function(err) {
+        notify.onError({
+          title: `Gulp error in ${err.plugin}`,
+          message: err.toString(),
+        })(err);
+        this.emit('end');
+      },
     }))
     .pipe(sass())
     .pipe(size({
