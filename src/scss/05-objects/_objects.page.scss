@@ -1,0 +1,9 @@
+.o-page {
+    padding-top: $global-spacing-unit;
+    padding-bottom: $global-spacing-unit;
+
+    @include mq($from: tablet) {
+        padding-top: $global-spacing-unit * 2;
+        padding-bottom: $global-spacing-unit * 2;
+    }
+}

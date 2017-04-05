@@ -8,7 +8,15 @@
     }
 }
 
-.o-container--max {
+.o-container--max-small {
+    width: 100%;
+    max-width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.o-container--max-big {
+    width: 100%;
     max-width: 1600px;
     margin-right: auto;
     margin-left: auto;

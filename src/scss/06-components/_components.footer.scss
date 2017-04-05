@@ -9,7 +9,7 @@
         color: #fff;
 
         &:hover {
-            color: $color-brand;
+            color: $color-primary;
         }
     }
 
@@ -18,12 +18,13 @@
     }
 }
 
-.github-link {
+.c-footer__github-link {
     svg {
         display: inline-block;
-        width: 1.4em;
-        height: 1.4em;
-        margin-right: 0.5em;
+        width: 1.2em;
+        height: 1.2em;
+        margin-top: -0.2em;
+        margin-left: 0.5em;
         vertical-align: middle;
         fill: currentColor;
     }

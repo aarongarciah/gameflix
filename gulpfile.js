@@ -130,6 +130,8 @@ gulp.task('watch', () => {
   gulp.watch('src/html/**/*.html', ['fileinclude', reload]);
 });
 
-gulp.task('default', ['fileinclude', 'js', 'imgmin', 'scss', 'watch', 'browser-sync']);
+gulp.task('default', ['fileinclude', 'js', 'imgmin', 'scss', 'watch'], () => {
+  gulp.start('browser-sync');
+});
 
 gulp.task('build', ['fileinclude', 'js', 'imgmin', 'scss']);

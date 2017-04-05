@@ -30,10 +30,12 @@
 // 05. Objects
 @import "05-objects/objects.layout";
 @import "05-objects/objects.container";
+@import "05-objects/objects.page";
 
 // 06. Components
 @import "06-components/components.button";
 @import "06-components/components.header";
+@import "06-components/components.nav";
 @import "06-components/components.main";
 @import "06-components/components.footer";
 @import "06-components/components.carousel";
@@ -45,5 +47,6 @@
 // 08. Utilities
 @import "08-utilities/utilities.clearfix";
 @import "08-utilities/utilities.hide";
+@import "08-utilities/utilities.colors";
 
 

@@ -2,18 +2,29 @@
     padding-top: $global-spacing-unit-small;
     padding-bottom: $global-spacing-unit-small;
     color: #fff;
-    background: $color-brand;
+    background: $color-primary;
 }
 
 .c-header__container {
-    @include mq($from: desktop) {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.c-header__title {
+.c-header__logo {
+    @include font-size($font-size-h1, $global-line-height-headings);
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+
+    &:hover,
+    &:active {
+        text-decoration: none;
+        color: #fff;
+        opacity: 0.8;
+    }
+
     @include mq($until: desktop) {
         font-size: $font-size-h1 * 0.7;
     }

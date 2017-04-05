@@ -27,6 +27,7 @@ $global-spacing-unit: round($global-line-height) !default;
 
 // How many times larger/smaller than the default should our spacing unit
 // variants be?
+$global-spacing-unit-factor-xxs: 0.2 !default;
 $global-spacing-unit-factor-tiny: 0.3 !default;
 $global-spacing-unit-factor-small: 0.5 !default;
 $global-spacing-unit-factor-large: 2 !default;
@@ -57,6 +58,7 @@ $global-spacing-unit-factor-huge: 4 !default;
 }
 
 // Private/framework-only reassignment. Do not alter anything below.
+$global-spacing-unit-xxs: round($global-spacing-unit * $global-spacing-unit-factor-xxs);
 $global-spacing-unit-tiny: round($global-spacing-unit * $global-spacing-unit-factor-tiny);
 $global-spacing-unit-small: round($global-spacing-unit * $global-spacing-unit-factor-small);
 $global-spacing-unit-large: round($global-spacing-unit * $global-spacing-unit-factor-large);

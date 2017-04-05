@@ -1,13 +1,44 @@
 <header class="c-header">
-    <div class="c-header__container o-container o-container--max">
-        <h1 class="c-header__title">Gameflix</h1>
+    <div class="c-header__container o-container o-container--max-small">
+        <a href="index.html" class="c-header__logo">Gameflix</a>
 
         @@if (showLogin === true) {
         <form class="c-header__form" action="#" method="post" accept-charset="utf-8" onsubmit="return submitTo(event, 'dashboard_first.html')">
-            <input class="c-input c-input--inline-block " type="text" placeholder="Username" required>
-            <input class="c-input c-input--inline-block " type="password" placeholder="Password" required>
+            <input class="c-input c-input--inline-block " type="text" placeholder="Username" autocapitalize="off" required>
+            <input class="c-input c-input--inline-block " type="password" placeholder="Password" autocapitalize="off" required>
             <button class="c-btn c-btn--secondary" type="submit">Log In</button>
         </form>
+        }
+
+        @@if (showLogin !== true) {
+        <nav class="c-nav">
+            <ul>
+                <li>
+                    <button class="c-nav__item" type="button" title="Notifications">
+                        <svg class="c-nav__item__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+                            <title>Notifications</title>
+                            <path d="M4 0c-1.1 0-2 .9-2 2 0 1.04-.52 1.98-1.34 2.66-.41.34-.66.82-.66 1.34h8c0-.52-.24-1-.66-1.34-.82-.68-1.34-1.62-1.34-2.66 0-1.1-.89-2-2-2zm-1 7c0 .55.45 1 1 1s1-.45 1-1h-2z" />
+                        </svg>
+                        <span class="c-nav__item__badge">2</span>
+                        <div class="c-nav__item__tooltip">
+                            <ul>
+                                <li>
+                                    <a href="profile.html"><strong>Complete your profile</strong> before adding new content</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </button>
+                </li>
+                <li>
+                    <a class="c-nav__item" href="profile.html" title="Profile">
+                        <svg class="c-nav__item__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
+                            <title>Profile</title>
+                            <path d="M4 0c-1.1 0-2 1.12-2 2.5s.9 2.5 2 2.5 2-1.12 2-2.5-.9-2.5-2-2.5zm-2.09 5c-1.06.05-1.91.92-1.91 2v1h8v-1c0-1.08-.84-1.95-1.91-2-.54.61-1.28 1-2.09 1-.81 0-1.55-.39-2.09-1z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
         }
     </div>
 </header>
