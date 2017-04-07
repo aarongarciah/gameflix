@@ -204,11 +204,15 @@ var options = {
 };
 
 window.onload = function () {
-  var ctx = $$('#chart').getContext('2d');
+  var chartSession = $$('#chart');
 
-  new Chart(ctx, {
-    type: 'bar',
-    data: data,
-    options: options
-  });
+  if (chartSession) {
+    var ctx = chartSession.getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: data,
+      options: options
+    });
+  }
 };
