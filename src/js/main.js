@@ -193,11 +193,15 @@ const options = {
 };
 
 window.onload = () => {
-  const ctx = $$('#chart').getContext('2d');
+  const chartSession = $$('#chart');
 
-  new Chart(ctx, {
-    type: 'bar',
-    data,
-    options,
-  });
+  if (chartSession) {
+    const ctx = chartSession.getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data,
+      options,
+    });
+  }
 };
