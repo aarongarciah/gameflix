@@ -161,42 +161,44 @@ function initTabs() {
 
 initTabs();
 
-const data = {
-  labels: ['Oct 16', 'Nov 16', 'Dec 16', 'Jan 17', 'Feb 17', 'Mar 17', 'Apr 17'],
-  datasets: [{
-    label: '',
-    fill: false,
-    tension: -1,
-    backgroundColor: '#f1657f',
-    borderCapStyle: 'butt',
-    pointBorderWidth: 0,
-    data: [0.5, 1, 2, 8, 1, 3, 10],
-  }],
-};
-
-const options = {
-  scales: {
-    xAxes: [{
-      categorySpacing: 15,
-      barPercentage: 0.5,
-      gridLines: {
-        display: false,
-      },
-    }],
-    yAxes: [{
-      ticks: {
-        // callback: (label, index, labels) => `${label} Mbps`,
-      },
-    }],
-  },
-  legendCallback: '',
-};
-
 window.onload = () => {
   const chartSession = $$('#chart');
 
   if (chartSession) {
     const ctx = chartSession.getContext('2d');
+
+    const data = {
+      labels: ['Oct 16', 'Nov 16', 'Dec 16', 'Jan 17', 'Feb 17', 'Mar 17', 'Apr 17'],
+      datasets: [{
+        label: '',
+        fill: false,
+        tension: -1,
+        backgroundColor: '#f1657f',
+        borderCapStyle: 'butt',
+        pointBorderWidth: 0,
+        data: [0.5, 1, 2, 8, 1, 3, 10],
+      }],
+    };
+
+    const options = {
+      scales: {
+        xAxes: [{
+          categorySpacing: 15,
+          barPercentage: 0.5,
+          gridLines: {
+            display: false,
+          },
+        }],
+        yAxes: [{
+          ticks: {
+            // callback: (label, index, labels) => `${label} Mbps`,
+          },
+        }],
+      },
+      legend: {
+        display: false,
+      },
+    };
 
     new Chart(ctx, {
       type: 'bar',
