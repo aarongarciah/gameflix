@@ -30,6 +30,7 @@ $global-spacing-unit: round($global-line-height) !default;
 $global-spacing-unit-factor-xxs: 0.2 !default;
 $global-spacing-unit-factor-tiny: 0.3 !default;
 $global-spacing-unit-factor-small: 0.5 !default;
+$global-spacing-unit-factor-medium: 0.75 !default;
 $global-spacing-unit-factor-large: 2 !default;
 $global-spacing-unit-factor-huge: 4 !default;
 
@@ -61,5 +62,6 @@ $global-spacing-unit-factor-huge: 4 !default;
 $global-spacing-unit-xxs: round($global-spacing-unit * $global-spacing-unit-factor-xxs);
 $global-spacing-unit-tiny: round($global-spacing-unit * $global-spacing-unit-factor-tiny);
 $global-spacing-unit-small: round($global-spacing-unit * $global-spacing-unit-factor-small);
+$global-spacing-unit-medium: round($global-spacing-unit * $global-spacing-unit-factor-medium);
 $global-spacing-unit-large: round($global-spacing-unit * $global-spacing-unit-factor-large);
 $global-spacing-unit-huge: round($global-spacing-unit * $global-spacing-unit-factor-huge);

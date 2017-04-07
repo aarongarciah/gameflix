@@ -6,7 +6,7 @@ const $ = document.querySelectorAll.bind(document);
 const $$ = document.querySelector.bind(document);
 
 /**
- * Go to
+ * Submit to
  */
 
 function submitTo(event, url) {
@@ -110,3 +110,94 @@ function initHomeCarousel() {
 }
 
 initHomeCarousel();
+
+/**
+ * Header notifications
+ */
+function initNavNotifications() {
+  const navNotifications = $$('.js-nav-notifications');
+
+  if (navNotifications) {
+    $$('.js-nav-notifications').addEventListener('click', (e) => {
+      const elemTarget = e.path.find(x => x.classList.contains('js-nav-notifications'));
+
+      if (elemTarget) {
+        elemTarget.classList.toggle('is-active');
+      }
+    });
+  }
+}
+
+initNavNotifications();
+
+/**
+ * Tabs
+ */
+function initTabs() {
+  const tabs = $$('.js-tabs');
+
+  if (tabs) {
+    const tabsItems = tabs.querySelectorAll('.js-tabs-link');
+    tabsItems.forEach((tab, index) => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const elemTarget = e.path.find(x => x.classList.contains('js-tabs-link'));
+
+        if (elemTarget) {
+          tabsItems.forEach(t => t.classList.remove('is-active'));
+          elemTarget.classList.toggle('is-active');
+
+          const tabContents = tabs.querySelectorAll('.js-tab-content');
+          tabContents.forEach(t => t.classList.remove('is-active'));
+
+          if (tabContents[index]) {
+            tabContents[index].classList.add('is-active');
+          }
+        }
+      });
+    });
+  }
+}
+
+initTabs();
+
+const data = {
+  labels: ['Oct 16', 'Nov 16', 'Dec 16', 'Jan 17', 'Feb 17', 'Mar 17', 'Apr 17'],
+  datasets: [{
+    label: '',
+    fill: false,
+    tension: -1,
+    backgroundColor: '#f1657f',
+    borderCapStyle: 'butt',
+    pointBorderWidth: 0,
+    data: [0.5, 1, 2, 8, 1, 3, 10],
+  }],
+};
+
+const options = {
+  scales: {
+    xAxes: [{
+      categorySpacing: 15,
+      barPercentage: 0.5,
+      gridLines: {
+        display: false,
+      },
+    }],
+    yAxes: [{
+      ticks: {
+        // callback: (label, index, labels) => `${label} Mbps`,
+      },
+    }],
+  },
+  legendCallback: '',
+};
+
+window.onload = () => {
+  const ctx = $$('#chart').getContext('2d');
+
+  new Chart(ctx, {
+    type: 'bar',
+    data,
+    options,
+  });
+};

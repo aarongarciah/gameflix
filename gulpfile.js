@@ -17,11 +17,12 @@ const babel = require('gulp-babel');
 const notify = require('gulp-notify');
 const fileinclude = require('gulp-file-include');
 const sourcemaps = require('gulp-sourcemaps');
+const deploy = require('gulp-gh-pages');
 
 const reload = browserSync.reload;
 
 gulp.task('scss', () => {
-  const onError = (err) => {
+  function onError(err) {
     notify.onError({
       title: 'Gulp',
       subtitle: 'Sass error!',
@@ -29,18 +30,12 @@ gulp.task('scss', () => {
       sound: 'Beep',
     })(err);
     this.emit('end');
-  };
+  }
 
   return gulp.src('src/scss/main.scss')
     .pipe(sourcemaps.init())
     .pipe(plumber({
-      errorHandler: function(err) {
-        notify.onError({
-          title: `Gulp error in ${err.plugin}`,
-          message: err.toString(),
-        })(err);
-        this.emit('end');
-      },
+      errorHandler: onError,
     }))
     .pipe(sass())
     .pipe(size({
@@ -70,7 +65,7 @@ gulp.task('scss', () => {
 gulp.task('js', () => {
   gulp.src('src/js/*.js')
     .pipe(babel({
-      presets: ['es2015'],
+      presets: ['es2015', 'es2016', 'es2017', 'stage-2'],
     }))
     .pipe(size({
       gzip: true,
@@ -122,12 +117,22 @@ gulp.task('fileinclude', () => {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('copystatic', () => {
+  gulp.src(['src/*', '!src/html', '!src/img', '!src/js', '!src/scss'])
+    .pipe(gulp.dest('dist'));
+  gulp.src('src/js/vendor/*.js')
+    .pipe(gulp.dest('dist/js/vendor'));
+});
+
 gulp.task('browser-sync', () => browserSync({
   server: {
     baseDir: './dist/',
   },
   open: true,
 }));
+
+gulp.task('deploy', () => gulp.src('dist/**/*')
+  .pipe(deploy()));
 
 gulp.task('watch', () => {
   gulp.watch('src/scss/**/*.scss', ['scss']);
@@ -136,8 +141,8 @@ gulp.task('watch', () => {
   gulp.watch('src/html/**/*.html', ['fileinclude', reload]);
 });
 
-gulp.task('default', ['fileinclude', 'js', 'imgmin', 'scss', 'watch'], () => {
+gulp.task('default', ['copystatic', 'fileinclude', 'js', 'imgmin', 'scss', 'watch'], () => {
   gulp.start('browser-sync');
 });
 
-gulp.task('build', ['fileinclude', 'js', 'imgmin', 'scss']);
+gulp.task('build', ['copystatic', 'fileinclude', 'js', 'imgmin', 'scss']);

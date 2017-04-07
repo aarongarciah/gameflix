@@ -1,0 +1,132 @@
+
+.p-game__tab {
+    display: none;
+    width: 100%;
+
+    &:target,
+    &.is-active {
+        display: block;
+
+        @include mq($from: desktop) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    p {
+        margin-bottom: $global-spacing-unit-small;
+    }
+
+    @include mq($from: desktop) {
+        padding-right: $global-spacing-unit;
+        padding-left: $global-spacing-unit;
+    }
+}
+
+.p-game-info__col-left {
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include mq($from: desktop) {
+        flex-basis: 50%;
+        padding-right: $global-spacing-unit * 2;
+        margin-bottom: 0;
+    }
+}
+
+.p-game-info__col-right {
+    @include mq($from: desktop) {
+        flex-basis: 50%;
+    }
+}
+
+.p-game-media {
+    text-align: center;
+}
+
+.p-game-confirm__col-left {
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include mq($from: desktop) {
+        flex: 0 0 30%;
+        padding-right: $global-spacing-unit * 2;
+        margin-bottom: 0;
+    }
+}
+
+.p-game-confirm__col-right {
+    @include mq($from: desktop) {
+        flex: 0 0 70%;
+    }
+}
+
+.p-game__data {
+    p {
+        @include mq($from: phablet) {
+            padding-right: $global-spacing-unit;
+            padding-left: $global-spacing-unit;
+        }
+    }
+
+    @include mq($from: phablet) {
+        display: flex;
+        padding-top: $global-spacing-unit-small;
+        margin-left: -$global-spacing-unit;
+    }
+}
+
+.p-game__btns {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: $global-spacing-unit;
+    text-align: right;
+
+    @include mq($from: desktop) {
+        flex-basis: 100%;
+    }
+}
+
+.p-game__btn-submit {
+    width: 100%;
+
+    @include mq($from: phablet) {
+        width: auto;
+    }
+}
+
+.p-game-media__icon {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: $global-spacing-unit-large;
+}
+
+.p-game-media__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.p-media__gallery__item {
+    padding-right: $global-spacing-unit-small;
+    margin-bottom: $global-spacing-unit;
+    padding-left: $global-spacing-unit-small;
+
+    @include mq($from: phablet) {
+        flex: 0 0 50%;
+    }
+
+    @include mq($from: tablet) {
+        flex: 0 0 33.333333%;
+    }
+
+    @include mq($from: desktop) {
+        flex: 0 0 20%;
+    }
+
+    @include mq($from: wide) {
+        flex: 0 0 20%;
+    }
+}

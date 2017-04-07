@@ -56,6 +56,7 @@
 // commenting out whitespace or minifying HTML.
 $use-markup-fix: false !default;
 
+
 /* Default/mandatory classes.
    ========================================================================== */
 
@@ -82,6 +83,7 @@ $use-markup-fix: false !default;
         font-size: 0;
     }
 }
+
 
 
 /**
@@ -113,6 +115,7 @@ $use-markup-fix: false !default;
         font-size: 1rem;
     }
 }
+
 
 
 /* Gutter size modifiers.
@@ -154,6 +157,7 @@ $use-markup-fix: false !default;
 }
 
 
+
 /* Vertical alignment modifiers.
    ========================================================================== */
 
@@ -169,6 +173,7 @@ $use-markup-fix: false !default;
 }
 
 
+
 /**
  * Align all grid items to the bottoms of each other.
  */
@@ -180,6 +185,7 @@ $use-markup-fix: false !default;
 }
 
 
+
 /**
  * Stretch all grid items of each row to have an equal-height.
  * Please be aware that this modifier class doesn't take any effect in IE9 and
@@ -189,10 +195,12 @@ $use-markup-fix: false !default;
 .o-layout--stretch {
     display: flex;
     flex-wrap: wrap;
+
     >.o-layout__item {
         display: flex;
     }
 }
+
 
 
 /* Fill order modifiers.
@@ -211,6 +219,7 @@ $use-markup-fix: false !default;
 }
 
 
+
 /**
  * Fill up the layout system from the right-hand side.
  */
@@ -221,6 +230,7 @@ $use-markup-fix: false !default;
         text-align: left;
     }
 }
+
 
 
 /**
@@ -236,6 +246,7 @@ $use-markup-fix: false !default;
 }
 
 
+
 /**
  * Reverse the rendered order of the grid system.
  */
@@ -246,6 +257,7 @@ $use-markup-fix: false !default;
         direction: ltr;
     }
 }
+
 
 
 /* Auto-widths modifier.

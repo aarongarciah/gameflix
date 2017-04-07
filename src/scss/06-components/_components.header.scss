@@ -1,4 +1,6 @@
 .c-header {
+    position: relative;
+    z-index: 999;
     padding-top: $global-spacing-unit-small;
     padding-bottom: $global-spacing-unit-small;
     color: #fff;
@@ -12,7 +14,8 @@
 }
 
 .c-header__logo {
-    @include font-size($font-size-h1, $global-line-height-headings);
+    @include font-size($font-size-h1 * 0.7, $global-line-height-headings);
+
     display: inline-block;
     font-weight: 700;
     text-decoration: none;
@@ -25,9 +28,19 @@
         opacity: 0.8;
     }
 
-    @include mq($until: desktop) {
-        font-size: $font-size-h1 * 0.7;
+    @include mq($from: desktop) {
+        @include font-size($font-size-h1, $global-line-height-headings);
     }
+}
+
+.c-header__logo__icon {
+        font-family: sans-serif;
+        margin: 0.2em;
+}
+
+.c-header__logo__icon {
+    font-family: sans-serif;
+    margin: 0.2em;
 }
 
 .c-header__form {
@@ -38,6 +51,10 @@
 
         > * {
             margin-left: $global-spacing-unit-tiny;
+        }
+
+        input {
+            margin-bottom: 0;
         }
     }
 }

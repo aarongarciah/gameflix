@@ -34,7 +34,7 @@
     padding: $global-spacing-unit-xxs $global-spacing-unit;
     transition: $global-transition;
     border: 0;
-    border-radius: 30px;
+    border-radius: $global-radius;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -72,6 +72,7 @@
 
 .c-btn--secondary {
     background-color: $color-secondary;
+    
     &,
     &:hover,
     &:active,
@@ -79,6 +80,7 @@
         text-decoration: none;
         color: #fff;
     }
+
     &:hover,
     &:focus {
         background-color: $color-dark;
@@ -86,18 +88,38 @@
 }
 
 .c-btn--tertiary {
-    background-color: #fff;
-    color: $color-dark;
+    background-color: $color-grey;
+    color: #fff;
+
     &,
     &:hover,
     &:active,
     &:focus {
         text-decoration: none;
-        color: $color-dark;
+        color: #fff;
     }
+
     &:hover,
     &:focus {
-        color: #000;
+        background-color: $color-dark;
+    }
+}
+
+.c-btn--danger {
+    background-color: $color-danger;
+    color: #fff;
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $color-dark;
     }
 }
 
@@ -107,5 +129,5 @@
 /* Size variants
    ========================================================================== */
 .c-btn--large {
-    padding: $global-spacing-unit $global-spacing-unit-large;
+    padding: $global-spacing-unit-small $global-spacing-unit-large;
 }
