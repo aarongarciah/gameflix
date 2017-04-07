@@ -1,13 +1,13 @@
 @@include('partials/_header.html', {
     "title": "Dashboard",
     "showLogin": false,
-    "showNotification": true
+    "showNotification": false
 })
             <div class="p-dashboard o-container o-container--max-small">
                 <section class="p-dashboard o-page o-layout o-layout--stretch">
                     <div class="o-layout__item">
                         @@include('partials/_content_item_new.html', {
-                            "newContentDisabled": true
+                            "newContentDisabled": false
                         })
                     </div>
                 </section>

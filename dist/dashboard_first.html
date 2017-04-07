@@ -3,29 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Home page – Gameflix by Aarón García Hervás – Fun 🔥 Academy</title>
+        <title>Dashboard – 🔥 Gameflix by Aarón García Hervás</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="Home page. Test 1 for Fun Academy made by Aarón García Hervás">
-        <meta name="keywords" content="fun academy, test 1">
+        <meta name="description" content="Dashboard. Test 1 made by Aarón García Hervás">
+        <meta name="keywords" content="Gameflix, test 1">
         <meta name="image" content="">
 
-        <meta itemprop="name" content="Home page – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
-        <meta itemprop="description" content="Home page. Test 1 for Fun Academy made by Aarón García Hervás">
+        <meta itemprop="name" content="Dashboard – 🔥 Gameflix by Aarón García Hervás">
+        <meta itemprop="description" content="Dashboard. Test 1 made by Aarón García Hervás">
         <meta itemprop="image" content="/img/fun-academy.png">
 
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Home page – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
-        <meta name="twitter:description" content="Home page. Test 1 for Fun Academy made by Aarón García Hervás">
+        <meta name="twitter:title" content="Dashboard – 🔥 Gameflix by Aarón García Hervás">
+        <meta name="twitter:description" content="Dashboard. Test 1 made by Aarón García Hervás">
         <meta name="twitter:site" content="@funacademycom">
         <meta name="twitter:creator" content="@aarongarciah">
         <meta name="twitter:image:src" content="/img/fun-academy-1024x512.png">
 
-        <meta property="og:title" content="Home page – Gameflix by Aarón García Hervás – Fun 🔥 Academy">
-        <meta property="og:description" content="Home page. Test 1 for Fun Academy made by Aarón García Hervás">
+        <meta property="og:title" content="Dashboard – 🔥 Gameflix by Aarón García Hervás">
+        <meta property="og:description" content="Dashboard. Test 1 made by Aarón García Hervás">
         <meta property="og:image" content="/img/fun-academy-1200x630.png">
         <meta property="og:url" content="https://funacademy.fi/">
-        <meta property="og:site_name" content="Fun Academy">
+        <meta property="og:site_name" content="Gameflix">
         <meta property="og:type" content="website">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -48,20 +48,25 @@
                 <nav class="c-nav">
                     <ul>
                         <li>
-                            <button class="c-nav__item" type="button" title="Notifications">
+                            
+                            <button class="c-nav__item is-active js-nav-notifications" type="button" title="Notifications">
                                 <svg class="c-nav__item__icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 8 8">
                                     <title>Notifications</title>
                                     <path d="M4 0c-1.1 0-2 .9-2 2 0 1.04-.52 1.98-1.34 2.66-.41.34-.66.82-.66 1.34h8c0-.52-.24-1-.66-1.34-.82-.68-1.34-1.62-1.34-2.66 0-1.1-.89-2-2-2zm-1 7c0 .55.45 1 1 1s1-.45 1-1h-2z" />
                                 </svg>
                                 <span class="c-nav__item__badge">2</span>
-                                <div class="c-nav__item__tooltip">
-                                    <ul>
-                                        <li>
-                                            <a href="profile.html"><strong>Complete your profile</strong> before adding new content</a>
-                                        </li>
-                                    </ul>
-                                </div>
                             </button>
+
+                            <div class="c-nav__tooltip">
+                                <ul>
+                                    <li>
+                                        <a href="profile.html"><strong>Complete your profile</strong> before adding new content</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+
+                            
                         </li>
                         <li>
                             <a class="c-nav__item" href="profile.html" title="Profile">
@@ -85,9 +90,27 @@
             <![endif]-->
 
 
-            <section class="o-page o-container o-container--max-small">
-                asd
-            </section>
+            <div class="p-dashboard o-container o-container--max-small">
+                <section class="p-dashboard o-page o-layout o-layout--stretch">
+                    <div class="o-layout__item">
+                        
+
+                        <article class="c-game c-game--new is-disabled">
+                            <div class="c-game__link">
+                                <div class="c-game__content">
+                                    <span class="c-game__plus">+</span>
+                                    <h2 class="c-game__title">Add new content</h2>
+                                </div>
+                            </div>
+                        </article>
+
+                        
+
+                        
+
+                    </div>
+                </section>
+            </div>
 
         </main>
 
@@ -96,12 +119,14 @@
                 <p>
                     Gameflix
                     · Made with &nbsp;<span class="u-color-primary">♥</span>&nbsp; by <a href="https://aarongarciah.com/" target="_blank" rel="noopener">Aarón García Hervás</a>
-                    · <a class="c-footer__github-link" href="https://github.com/aarongarciah/Fun-Academy-Test-1" target="_blank" rel="noopener">
+                    · <a class="c-footer__github-link" href="https://github.com/aarongarciah/gameflix/" target="_blank" rel="noopener">
                         View source code <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path d="M8 0C3.58 0 0 3.582 0 8c0 3.535 2.292 6.533 5.47 7.59.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82.64-.178 1.32-.266 2-.27.68.004 1.36.092 2 .27 1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117.51.56.82 1.274.82 2.147 0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38C13.71 14.53 16 11.53 16 8c0-4.418-3.582-8-8-8"/></svg>
                     </a>
                 </p>
             </div>
         </footer>
+
+        
 
         <script src="/js/j.min.js"></script>
         <script>
