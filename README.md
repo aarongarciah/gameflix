@@ -5,7 +5,7 @@
 
 Execute in the terminal `npm install` or `yarn install` to install dependencies.
 
-## Develpment server
+## Development server
 
 To run the development server just execute `gulp` in the terminal.
 
